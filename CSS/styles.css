@@ -70,6 +70,7 @@ button {
 }
 
 .header-main {
+	position: relative;
 	border-bottom: 1px solid #d9d9d9;
 	padding-top: 0;
 	padding-bottom: 0;
@@ -108,6 +109,19 @@ button {
 .nav-notactive:hover,
 .nav-notactive:focus {
 	color: var(--accent-color);
+	transition-duration: 250ms;
+	transition-timing-function: bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-active::after {
+	content: "";
+	display: block;
+	position: absolute;
+	bottom: 0;
+	width: 78px;
+	height: 4px;
+	border-radius: 2px;
+	background-color: var(--accent-color);
 }
 
 .contacts-nav {
@@ -170,6 +184,8 @@ button {
 	background-color: #404bbf;
 	cursor: pointer;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+	transition-duration: 250ms;
+	transition-timing-function: bezier(0.4, 0, 0.2, 1);
 }
 
 /* Features */
@@ -347,6 +363,8 @@ button {
 .logo-company-box:hover,
 .logo-company-box:focus {
 	color: var(--accent-color);
+	transition-duration: 250ms;
+	transition-timing-function: bezier(0.4, 0, 0.2, 1);
 }
 
 /* Footer */
@@ -398,6 +416,8 @@ button {
 .icon-footer-link:hover,
 .icon-footer-link:focus {
 	background-color: var(--hover-color);
+	transition-duration: 250ms;
+	transition-timing-function: bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-footer-link {
@@ -443,6 +463,8 @@ button {
 	background-color: var(--accent-color);
 	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 	border-color: var(--accent-color);
+	transition-duration: 250ms;
+	transition-timing-function: bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-list {
@@ -460,6 +482,8 @@ button {
 .portfolio-link:hover,
 .portfolio-link:focus {
 	box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+	transition-duration: 250ms;
+	transition-timing-function: bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-title {
@@ -476,4 +500,32 @@ button {
 	padding-left: 16px;
 	border: 0.5px solid #f4f4fd;
 	border-top: none;
+}
+.portfolio-thumb {
+	position: relative;
+	overflow: hidden;
+}
+
+.portfolio-thumb::before {
+	content: "14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App";
+	display: inline-block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	padding-top: 40px;
+	padding-left: 32px;
+	padding-right: 32px;
+	color: var(--secondary-background-color);
+	font-family: "Roboto";
+	line-height: 1.5;
+	background-color: var(--accent-color);
+	opacity: 0;
+	transform: translateY(100%);
+}
+
+.portfolio-thumb:hover::before {
+	opacity: 1;
+	transform: translateY(0);
+	transition-duration: 250ms;
+	transition-timing-function: bezier(0.4, 0, 0.2, 1);
 }
