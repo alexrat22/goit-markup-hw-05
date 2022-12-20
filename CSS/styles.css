@@ -70,7 +70,6 @@ button {
 }
 
 .header-main {
-	position: relative;
 	border-bottom: 1px solid #d9d9d9;
 	padding-top: 0;
 	padding-bottom: 0;
@@ -100,17 +99,22 @@ button {
 	margin-right: 40px;
 }
 
-.nav-notactive,
 .nav-notactive {
 	color: var(--secondary-text-color);
+	transition-property: color;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.nav-active,
 .nav-notactive:hover,
 .nav-notactive:focus {
 	color: var(--accent-color);
-	transition-duration: 250ms;
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-active {
+	position: relative;
+	color: var(--accent-color);
+	padding: 28px 0;
 }
 
 .nav-active::after {
@@ -118,7 +122,7 @@ button {
 	display: block;
 	position: absolute;
 	bottom: 0;
-	width: 78px;
+	width: 100%;
 	height: 4px;
 	border-radius: 2px;
 	background-color: var(--accent-color);
@@ -176,6 +180,9 @@ button {
 	margin-left: auto;
 	margin-right: auto;
 	border: none;
+	transition-property: color background-color box-shadow cursor;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-button:hover,
@@ -184,8 +191,6 @@ button {
 	background-color: #404bbf;
 	cursor: pointer;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-	transition-duration: 250ms;
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop {
@@ -228,14 +233,15 @@ button {
 .modal-icon {
 	border: 1px solid rgba(0, 0, 0, 0.1);
 	border-radius: 50%;
+	transition-property: border-color box-shadow;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-icon:hover,
 .modal-icon:focus {
 	border-color: #e7e9fc;
 	box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-	transition-duration: 250ms;
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Features */
@@ -408,13 +414,14 @@ button {
 	border-radius: 3px;
 	width: 168px;
 	height: 88px;
+	transition-property: color;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .logo-company-box:hover,
 .logo-company-box:focus {
 	color: var(--accent-color);
-	transition-duration: 250ms;
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Footer */
@@ -463,13 +470,6 @@ button {
 	margin-top: 16px;
 }
 
-.icon-footer-link:hover,
-.icon-footer-link:focus {
-	background-color: var(--hover-color);
-	transition-duration: 250ms;
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .icon-footer-link {
 	display: flex;
 	justify-content: center;
@@ -479,6 +479,14 @@ button {
 	border-radius: 50%;
 	background-color: var(--main-text-color);
 	fill: var(--secondary-background-color);
+	transition-property: background-color;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon-footer-link:hover,
+.icon-footer-link:focus {
+	background-color: var(--hover-color);
 }
 
 /* Page "Portfolio" */
@@ -498,13 +506,9 @@ button {
 	padding: 12px 24px;
 	border: 1px solid #e7e9fc;
 	border-radius: 4px;
-}
-
-.portfolio-buttons {
-	display: flex;
-	justify-content: center;
-	column-gap: 24px;
-	margin-bottom: 72px;
+	transition-property: color background-color box-shadow border-color;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filter-button:hover,
@@ -513,8 +517,13 @@ button {
 	background-color: var(--accent-color);
 	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 	border-color: var(--accent-color);
-	transition-duration: 250ms;
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-buttons {
+	display: flex;
+	justify-content: center;
+	column-gap: 24px;
+	margin-bottom: 72px;
 }
 
 .portfolio-list {
@@ -527,13 +536,14 @@ button {
 .portfolio-link {
 	display: block;
 	color: inherit;
+	transition-property: box-shadow;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-link:hover,
 .portfolio-link:focus {
 	box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-	transition-duration: 250ms;
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-title {
@@ -569,12 +579,13 @@ button {
 	background-color: var(--accent-color);
 	opacity: 0;
 	transform: translateY(0);
+	transition-property: transform opacity;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-link:hover .portfolio-overlay,
 .portfolio-link:focus .portfolio-overlay {
 	opacity: 1;
 	transform: translateY(-100%);
-	transition-duration: 250ms;
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
