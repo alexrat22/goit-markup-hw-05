@@ -180,7 +180,7 @@ button {
 	margin-left: auto;
 	margin-right: auto;
 	border: none;
-	transition-property: color background-color box-shadow cursor;
+	transition-property: color, background-color, box-shadow, cursor;
 	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -233,7 +233,7 @@ button {
 .modal-icon {
 	border: 1px solid rgba(0, 0, 0, 0.1);
 	border-radius: 50%;
-	transition-property: border-color box-shadow;
+	transition-property: border-color, box-shadow;
 	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -506,8 +506,8 @@ button {
 	padding: 12px 24px;
 	border: 1px solid #e7e9fc;
 	border-radius: 4px;
-	transition-property: color background-color box-shadow border-color;
-	transition-duration: 250ms;
+	transition-property: color, background-color, box-shadow, border-color;
+	transition-duration: 2500ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -579,7 +579,7 @@ button {
 	background-color: var(--accent-color);
 	opacity: 0;
 	transform: translateY(0);
-	transition-property: transform opacity;
+	transition-property: transform, opacity;
 	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
